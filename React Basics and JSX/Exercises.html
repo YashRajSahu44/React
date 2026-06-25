@@ -1,0 +1,294 @@
+<!-- 1a. Using react, display a button on the website with the text "Good job" inside the button  -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+
+        const div = (
+            <div>
+             <button>Good Job!</button>
+            </div>
+          );
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(div);
+    </script>
+  </body>
+</html>
+
+
+<!-- 1b. Using react , display a paragraph with the text "My nmae is Yash" on the website -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+
+        const para = <p> My name is yash</p>
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(para);
+    </script>
+  </body>
+</html>
+
+
+<!-- 
+ 1c. Craete a design on the right and display it on the dwebsite using react (
+    cotton socks
+    price: $10
+    button : Add to cart
+ ) -->
+
+
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+
+        const div = (
+          <div>
+             <p>Cotton Socks</p>
+             <p>Price $10</p>
+             <button>Click To Buy</button>
+          </div>
+        );
+
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(div);
+    </script>
+  </body>
+</html>
+
+
+<!-- 1d. You Buy 1 pack of socks for $10 and 2 Tshirts for 8$ each.using javascript, calculate the total cost of this order, save it in a varible named productcost, and display it on the website. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+        const productcost = 10 + 16;
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(productcost);
+    </script>
+  </body>
+</html>
+
+<!-- 1e.continuing from 1d , insert the productcost variable in an paragraph element, create an design amd display on the websites
+( productcost: $__) replace __ and insrt the  productcost variable  -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+
+        const productcost = <p> product cost: ${10+16}</p>
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(productcost);
+    </script>
+  </body>
+</html>
+
+<!-- 
+ 1f. Continuing from 1e, lets pretend the shipping cost is $5. save this in a variable nmaed shippingcost, calculate the total cost using js (productcost + shipingcost), and display the results on the web 
+ (
+    product cost: $A
+    Shipping cost: $B
+    Total cost: $C
+    
+    Note: Replace A and insert product cost and in place of B shippingcost and in c the total cost 
+ ) -->
+
+ <html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+
+     
+        const productcost = 26;
+        const shippingcost =  5;
+        const totalamount  = productcost + shippingcost;
+
+        const div =(
+              <div>
+                <p>product cost: ${productcost}</p>
+                <p>Shipping cost: ${shippingcost}</p>
+                <p>Total cost: ${totalamount}</p>
+                <button>Place your order</button>
+              </div>
+             )
+
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(div);
+    </script>
+  </body>
+</html>
+
+
+ <!-- 1g. We are going to load the Dayjs external lib on the web
+ > To load DayJs craete a <script></script> above your code and loa the url https://unpkg.com/supersimpledev/dayjs.js
+ > After dayjs is loaded, use the code: dayjs().format('MMMM D')
+ to get the current date. display the result on the console  -->
+
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+    <script src=" https://unpkg.com/supersimpledev/dayjs.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+    const day =   dayjs().format('MMMM D')      
+    console.log(day);
+    
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render();
+    </script>
+  </body>
+</html>
+
+
+<!-- 1h. Display on the website  -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+    <script src=" https://unpkg.com/supersimpledev/dayjs.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+    const day =   dayjs().format('MMMM D') 
+    const para = <p>Today is {day}</p>     
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(para);
+    </script>
+  </body>
+</html> 
+ 
+
+
+ <!-- 1j. Using dayjs get the currrent time usind dayjs().format('HH:mm:ss') and display on the web  -->
+
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+    <script src=" https://unpkg.com/supersimpledev/dayjs.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+    const time =   dayjs().format('HH:mm:ss')
+    const para = <p> Current time{time}</p>      
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(para);
+    </script>
+  </body>
+</html> 
+
+<!-- 1j.We'll create a clock. Continue from exercise li and do these steps:
+First, instead of doing ReactDOM.createRoot(...).render(...); save the root in a Variable const root = ReactDOM.createRoot(...); and then do root. render(...);
+Use the JavaScript code: setInterval(() => {... }, 1000);
+(replace... with some code and it will run this code every second).
+Inside setInterval, display the current time
+on the website using root. render(...);
+(setInterval will run this code every second
+and this will create a clock). -->
+
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+    <script src=" https://unpkg.com/supersimpledev/dayjs.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+    const time =   dayjs().format('HH:mm:ss')
+    const para = <p> Current time{time}</p>      
+      const container = document.querySelector('.js-container');
+     const root =  ReactDOM.createRoot(container);
+     root.render(para);
+
+       setInterval(() => {
+        const paragraph = <p>Current time: {dayjs().format('HH:mm:ss')}</p>;
+        root.render(para);
+      }, 1000);
+    </script>
+  </body>
+</html> 

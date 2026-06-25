@@ -1,0 +1,40 @@
+<!-- What is react?
+react is an external library that helps us create website easier -->
+
+<!-- Minimum amount of code to setup React -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render('hey,i am Yash');
+    </script>
+  </body>
+</html>
+
+<!-- Why are there two external libraries?
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+- Rect can be used in different places 
+   1) React =shared features 
+   2) ReactDOM = features specific to websites 
+
+   3) ReactNATIVE = for applications -->
+
+
+
+   <!-- JSX
+   JavaScript XML 
+   : Same as javascript but we can write html directly in our html file  -->
