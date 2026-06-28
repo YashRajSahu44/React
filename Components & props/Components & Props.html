@@ -1,0 +1,141 @@
+<!-- Components
+
+A component is a piece of a website.
+
+Why use components?
+
+- While building a website, it's better to split it into smaller pieces.
+- This allows us to work on one small part of the website at a time.
+- React is used to break a website into small, reusable pieces.
+
+Creating a Component
+
+A component is always created using a function. -->
+
+function ChatInput() {
+
+}
+
+<!-- «Note: Component names should always start with a capital letter (PascalCase).»
+
+---
+
+JSX
+
+JSX allows us to write HTML inside JavaScript.
+
+Example: -->
+
+<button>Send</button>
+
+<!-- Self-closing tags: -->
+
+<input />
+<img />
+
+---
+
+<!-- Component Syntax
+
+Instead of calling a component like a normal function:
+
+ChatInput();
+
+Use JSX syntax: -->
+
+<ChatInput />
+
+<!-- This is the correct way to render a React component.
+
+«Note: Components behave like custom HTML tags.»
+
+---
+
+Fragments
+
+Fragments are used to group multiple elements without adding an extra "<div>".
+
+Example: -->
+
+<>
+  <input />
+  <button>Send</button>
+</>
+
+<!-- Remember: Fragment = Grouping elements without creating extra HTML.
+
+---
+
+Props
+
+Props are data passed into a component.
+
+Example: -->
+
+<ChatMessage message="Hi" />
+
+<!-- Inside the component:
+
+props.message
+
+Props are the inputs of a component.
+
+Without Props
+
+Hello
+Hello
+Hello
+
+With Props -->
+
+<ChatMessage message="Hi" />
+<ChatMessage message="Bye" />
+
+<!-- - Same component
+- Different data
+- Makes code reusable
+
+---
+
+Destructuring Props
+
+Instead of writing:
+
+props.message
+props.sender
+
+Use destructuring: -->
+
+function ChatMessage({ message, sender }) {
+
+}
+
+<!-- This is a shortcut to access values from "props".
+
+---
+
+Conditional Rendering
+
+Conditional rendering means showing something only when a condition is true.
+
+Example:  -->
+
+sender === "robot" && <img />
+
+<!-- The "&&" operator works like a mini "if" statement.
+
+---
+
+App Component
+
+The entire website is wrapped inside the App component. -->
+
+function App() {
+  return (
+    ...
+  );
+}
+
+<!-- Render the app using: -->
+
+root.render(<App />);
