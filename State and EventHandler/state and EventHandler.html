@@ -1,0 +1,163 @@
+1. Why use State?
+
+State stores data that changes over time.
+
+Without state:
+
+You have to manually update the UI.
+React doesn't know when data changes.
+
+With state:
+
+React automatically re-renders the UI whenever the state changes.
+
+
+2. Event Handlers
+
+Event handlers respond to user interactions.
+
+function sendMessage() {
+  console.log("Send");
+}
+
+<button onClick={sendMessage}>
+  Send
+</button>
+
+Common event handlers:
+
+onClick
+onChange
+onSubmit
+3. useState()
+
+useState() creates state inside a component.
+
+const [chatMessages, setChatMessages] = React.useState([]);
+chatMessages → current state
+setChatMessages() → updates the state
+
+Syntax:
+
+const [state, setState] = React.useState(initialValue);
+4. Why not use a normal variable?
+let message = [];
+
+Updating it:
+
+message.push(newMessage);
+
+React doesn't know the variable changed.
+
+Using state:
+
+setChatMessages(newMessages);
+
+React detects the update and re-renders the UI.
+
+5. Updating Arrays
+
+ Don't modify state directly.
+
+chatMessages.push(message);
+
+ Create a new array.
+
+setChatMessages([
+  ...chatMessages,
+  newMessage
+]);
+
+Spread operator (...) copies the old array before adding new items.
+
+6. Reading Input
+<input onChange={saveInputText} />
+function saveInputText(event) {
+  console.log(event.target.value);
+}
+
+event.target.value gives the current text inside the textbox.
+
+7. Input State
+const [inputText, setInputText] = React.useState("");
+
+Update it:
+
+function saveInputText(event) {
+  setInputText(event.target.value);
+}
+8. Sending a Message
+setChatMessages([
+  ...chatMessages,
+  {
+    message: inputText,
+    sender: "user",
+    id: crypto.randomUUID()
+  }
+]);
+
+Steps:
+
+Read input.
+Copy existing messages.
+Add new message.
+Update state.
+9. Clearing the Input
+setInputText("");
+
+This clears the textbox after sending.
+
+10. Controlled Inputs
+<input
+  value={inputText}
+  onChange={saveInputText}
+/>
+
+React controls the input value through state.
+
+Benefits:
+
+Easy validation
+Predictable behavior
+Single source of truth
+11. Rendering Lists
+chatMessages.map((chatMessage) => {
+  return (
+    <ChatMessage
+      key={chatMessage.id}
+      message={chatMessage}
+    />
+  );
+});
+
+map() runs once for every item and returns a new list of JSX elements.
+
+12. Keys in React
+<ChatMessage
+  key={chatMessage.id}
+/>
+
+Every list item needs a unique key.
+
+Why?
+
+Helps React identify items.
+Improves performance.
+Prevents rendering bugs.
+13. Storing Objects
+
+Instead of many variables:
+
+const chatMessage = {
+  message: "Hello",
+  sender: "user",
+  id: 1
+};
+
+Store related data inside one object.
+
+14. Benefits of State
+Cleaner code
+Easier debugging
+Better organization
+Automatic UI updates
