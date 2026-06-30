@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Basics</title>
+  </head>
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+    <script type="text/babel">
+        
+        // Using React.useState(), save a count. the count should have an initial value of 0 and react.useState() should return 2 values count(the current data) and setCount(the updater function )
+
+        // > Update the text in the button so it displays the count instead of 0 
+        // > When Clicking the button, use the updater function to increase the count by 1. Click the button a few times to test your code 
+
+       
+        function App() {
+              const [initalValue , finalValue ] = React.useState(0)
+              function increaseCount () {
+                finalValue(initalValue + 1);
+              }
+            return(
+            <button onClick={increaseCount}>Clicked {initalValue} times</button>
+           
+        );
+        }
+
+      const container = document.querySelector('.js-container');
+      ReactDOM.createRoot(container).render(<App/>);
+    </script>
+  </body>
+</html>
